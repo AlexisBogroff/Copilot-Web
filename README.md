@@ -208,6 +208,7 @@ What was the result of France vs Spain?
 > Knowledge with or without sources?
 >- Difference between LLM knowledge without search (**global internet**) vs knowledge through **few sources** (precise, with sources, but potentially more limited and more heavily biased).
 >- Can be smarter without internet.
+>- In these cases, ask the model to use only its knowledge to prevent its use of search (or disable Search plugin depending on your version).
 
 <details>
 <summary><b>More details</b></summary>
@@ -238,7 +239,6 @@ From [Microsoft tips](https://support.microsoft.com/en-us/topic/cooking-up-a-gre
 - **Source**
 - **Expectations** (response style)
 
-![alt text](images/image-19.png)
 
 #### Follow-up / disucssion
 Reduces the space of possibilities. It is a simpler (rather than creating a huge single prompt) more human friendly way to both provide the context and details for the query to be understood properly by Copilot.
