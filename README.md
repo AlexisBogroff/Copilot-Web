@@ -1,5 +1,21 @@
 # Microsoft Copilot Web
 
+**Links**
+[Google Slides Kikopilot](https://docs.google.com/presentation/d/1GscGEUzxtKfy4llIZSKBs2TU7nAziwbUe3W9X9hIoHU/edit?usp=sharing)
+
+## What to remember
+
+**About Copilot Web**
+- **Chat with Copilot like any LLM**, but **<r>with data protection</r>** (thus, most technics available for other LLMs also work on Copilot).
+- Web version, so it's not integrated in Microsoft 365 products.
+
+Thus, the following mostly describes how to use an LLM that has vision capabilities, even though it will be using examples and limits specific to current Copilot version.
+
+**About an LLM with Vision**
+- Talk with it like a sort of **strange human assistant**, with a **lot of knowledge**, **relatively smart**, but **absolutely not proactive**, a bit **too confident** in it's answers, yet **really polite** and patient (don't talk much with it as a search engine like Google).
+- Exploit vision, by sharing screenshots, images, that contain information (was not possible before Vision LLMs).
+- Be counscious of it's greater ecological impact compared to a simple search on the web.
+
 ## Capabilities
 
 **Copilot Web tools**
@@ -7,8 +23,6 @@
 - Summarization of documents and web pages.
 - Image creation in Designer (formerly Bing Image Creator).
 - Web grounding.
-- Use of plugins and Copilot GPTs.
-- For work: When enabled, commercial data protection is included for eligible - Microsoft Entra ID users
 
 **What it can do ([source](https://www.microsoft.com/en-us/microsoft-copilot)):**
 - Compose essays, emails, and cover letters
@@ -20,8 +34,8 @@
 - Build your resume
 - Search the internet
 
-> [!WARNING]
-> Copilot can do the same tasks than ChatGPT4, but **ensuring the protection** of your **private and business data** ([Official Microsoft comparison](https://support.microsoft.com/en-au/topic/chatgpt-vs-microsoft-copilot-what-s-the-difference-8fdec864-72b1-46e1-afcb-8c12280d712f)).
+!!! warning Copilot
+    Copilot can do the same tasks than ChatGPT4, but **ensuring the protection** of your **private and business data** ([Official Microsoft comparison](https://support.microsoft.com/en-au/topic/chatgpt-vs-microsoft-copilot-what-s-the-difference-8fdec864-72b1-46e1-afcb-8c12280d712f)).
 
 
 **Indeed, ChatGPT4 is used directly by Copilot** ([official source](https://support.microsoft.com/en-us/topic/copilot-in-bing-our-approach-to-responsible-ai-45b5eae8-7466-43e1-ae98-b48f8ff8fd44))
@@ -51,20 +65,48 @@
 
 <details>
 <summary><b>Temperature</b></summary>
-
 *"Temperature"* parameter in LLMs: *"temperature - A measure of how often the model outputs a less likely token. The higher the temperature, the more random (and usually creative) the output. This, however, is not the same as “truthfulness”. For most factual use cases such as data extraction, and truthful Q&A, the temperature of 0 is best."* ([source](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api))
-
 </details>
 
-#### Recent discussions
-Previous conversations with Copilot
+##### Example prompt `precise`
 
-#### Copilot GPTs
-- Copilot (base language model)
-- Designer (image generation)
+```
+Write a short paragraph on Kiko milano
+```
+[Source](https://copilot.microsoft.com/sl/gMJz4MxjRk)
 
-#### Copilot plugins
-- Search
+![alt text](images/image-44.png)
+
+
+##### Same prompt `Creative`
+![alt text](images/image-45.png)
+
+Its answer relies **far less on verified information from a specific source** (and more on its own knowledge).
+
+
+#### Copilot Notebook
+*"It’s a new interface for crafting, improving, and revising your prompts without chat dialogue. Ideal when you need to iterate on a prompt to get the best result. It supports up to 18K characters.".* - Jordi Ribas, Microsoft's CVP of Search and AI.
+
+**Pros**
+- 18.000 characters vs 4.000 character limit in Copilot chat (veryfied manually).
+
+**Use cases**
+- Code debugging
+- Correct / summarise longer texts
+
+
+#### Context windows in general
+- Depending on the model, it can be better at memorizing the whole discussion.
+- "**primacy and recency effects**" known from human memory, states that most models have been proven to recall better the beggining and the end of a conversation ([source](https://the-decoder.com/large-language-models-and-the-lost-middle-phenomenon/), [source 2](https://arxiv.org/abs/2311.03839)). Including GPT-4 (used by Copilot).
+- Ways in which contexts lenghts are currently extended might affect even more previous chat discussion (my own predictions). It would reduce the computational requirements and latency, at the cost of losing information that is too far at the beggining.
+- **Rule of thumb**:
+  - 1 token ~= ¾ words
+  - 100 tokens ~= 75 words
+  - 4000 tokens ~= 3000 words
+  - 18000 tokens ~= 13.500 words
+
+<!-- #### Copilot plugins
+- Search -->
 <!-- ("Disabling Search will disable all enabled plugins") -->
 
 <!-- Other plugins are not accessible:
@@ -72,6 +114,21 @@ Previous conversations with Copilot
 - [Roadmap showing availability in Bing or Edge search engines](https://learn.microsoft.com/en-us/copilot/plugins/roadmap)
 - More on [Bing search](https://support.microsoft.com/en-us/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3), see section *"The Basics of Search"*. -->
 
+
+#### Voice
+- Input a prompt without typing.
+- Detects automatically the end of the sentence to trigger the answer.
+- Answers using the voice.
+- Any answer can be read-aloud even though the conversation has started and continued in text based only.
+- The language preference can be set in the settings section. By default it adapts to the conversation and can switch during a conversation.
+
+#### Settings
+**Basic webapp settings**
+- Language
+- Suggestions while typing
+- Color theme
+- Region (for the web search)
+- In privacy, possibility to remove the history.
 
 ### Basics
 
@@ -89,7 +146,7 @@ A prompt is:
 Please generate a bullet-point list of the most crowded cities on the planet.
 ```
 
-![alt text](image-27.png)
+![alt text](images/image-27.png)
 
 
 [Prompt 2: follow-up discussion](https://copilot.microsoft.com/sl/gmohrKmYsjA)
@@ -99,13 +156,13 @@ Please instead provide only their name and population in 2022.
 No additional information of message around your answer.
 ```
 
-![alt text](image-28.png)
+![alt text](images/image-28.png)
 
 
 #### New topic (button)
 Since the answer depend on the current context, it's important to manage the context consciously. If the previous information is not useful (it might then be harmful), create a new conversation.
 
-![alt text](image-24.png)
+![alt text](images/image-24.png)
 
 ##### Prompt example
 
@@ -115,33 +172,44 @@ What is a PCA?
 
 [Using a `previous` topic](https://copilot.microsoft.com/sl/bUaIyY9nfpI) (discussion / conversation): where the previous question provided a context about a technical user, eager to find maths in the previous answer. **Copilot** then also reply using a technical approach, adding mathematical details to the subsequent answers.
 
-![alt text](image-26.png)
+![alt text](images/image-26.png)
 
 [Using a `new` topic](https://copilot.microsoft.com/sl/ckbyvFRXQCi): **Copilot** answers without much technical details and employs a ton that is adapted to a broader audience.
 
-![alt text](image-25.png)
+![alt text](images/image-25.png)
+
 
 #### Copilot x Bing Search
 
-![alt text](image-31.png)
 
-<img src="image-30.png" alt="drawing" width="400"/>
 
-**<g>Enabled</g>** by default.
 
 Necessary for recent information, and any information that is not well knwon (in dozens of articles, books, etc.).
 
 ##### Prompt example 1
 ```
+What are the best sellers products of Kiko milano?
+```
+[Source discussion](https://copilot.microsoft.com/sl/BJqTHRQWGa)
+
+![alt text](images/image-42.png)
+
+##### Prompt example 2
+```
+Write a blog post about sustainable practices in business for beauty industry.
+```
+[Source discussion](https://copilot.microsoft.com/sl/i5o6FFtFmF2)
+
+![alt text](images/image-43.png)
+
+##### Prompt example 3
+```
 What was the result of France vs Spain?
 ```
 [With search](https://copilot.microsoft.com/sl/0yQZaaL3cq)
 
-![alt text](image-29.png)
+![alt text](images/image-29.png)
 
-[Without search](https://copilot.microsoft.com/sl/dmHvNIct9VI)
-
-![alt text](image-32.png)
 
 
 ##### Prompt example 2
@@ -161,11 +229,11 @@ What are the main habbits that people struggle to implement in their lives?
 
 Without Search ([attempt 1](https://copilot.microsoft.com/sl/cU6GIqeS6Oi), [attempt 2](https://copilot.microsoft.com/sl/cRjpS80cKnA))
 
-![alt text](image-33.png)
+![alt text](images/image-33.png)
 
 With Search enabled ([attempt 1](https://copilot.microsoft.com/sl/dV4J7R7Evy8), [attempt 2](https://copilot.microsoft.com/sl/iKcHcB3WeEC))
 
-![alt text](image-34.png)
+![alt text](images/image-34.png)
 
 ### How to prompt
 
@@ -179,7 +247,7 @@ From [Microsoft tips](https://support.microsoft.com/en-us/topic/cooking-up-a-gre
 - **Source**
 - **Expectations** (response style)
 
-![alt text](image-19.png)
+![alt text](images/image-19.png)
 
 #### Follow-up / disucssion
 Reduces the space of possibilities. It is a simpler (rather than creating a huge single prompt) more human friendly way to both provide the context and details for the query to be understood properly by Copilot.
@@ -248,82 +316,132 @@ TODO
 
 
 #### Translation
-- Better with plugin search disabled (otherwise will spent time crawling the web for no added value).
-- Be clear in your prompt by starting to define the translation task, before providing the text to translate.
-
-
-[Not properly formulated](https://copilot.microsoft.com/sl/gKeQ2gNbV2i)
-```
-Les outils d'intelligence artificielle sont un atout majeur pour la productivité d'une entreprise.
-
-Translate in English please.
-```
-
-![alt text](image-35.png)
-
-
-[Better formulated](https://copilot.microsoft.com/sl/i2MG8GvxueG), with search activated, obtaining useless sources, and **taking more time** to obtain the translation.
 
 ```
 Translate the following sentence in English please:
 "Les outils d'intelligence artificielle sont un atout majeur pour la productivité d'une entreprise."
 ```
 
-![alt text](image-36.png)
-
-[Same formulation](https://copilot.microsoft.com/sl/jbOPMdooRvU), without search.
-
-![alt text](image-37.png)
+![alt text](images/image-36.png)
 
 
-**Precise the output format**
+
+#### Search & recap
 
 ```
-Please just the sentence, no word around.
+Trends in AI in 2024
 ```
+[Source](https://copilot.microsoft.com/sl/gkJfRRIwQai)
 
-![alt text](image-38.png)
+![alt text](images/image-46.png)
 
 
-**Follow-up discussion**: Now that the context is clear, you can simply provide your French text for English translation
+#### Mail
 
-```
-L'intelligence artificielle révolutionne le monde, il est important de comprendre
-les tenants et aboutissants de cette technologie.
-```
+[Source](https://copilot.microsoft.com/sl/jVWSRbafyP6)
 
-![alt text](image-39.png)
+Prompt
+![alt text](<images/Screenshot 2024-07-22 at 01.40.51.png>)
 
+Answer
+![alt text](<images/Screenshot 2024-07-22 at 01.40.58.png>)
 
 ### "Vision": Image to text
 <!-- (could not be done without an LLM) -->
 - Use screenshot as context
 - Explain screenshot / image / photo
+  - [conv. straightforward](https://copilot.microsoft.com/sl/dTXrxzvsU3w): impressive answer, good understanding of behaviours in pictures that contain subjects that are covered all over the internet.
+      ```
+      Can you describe this picture please?
+      ```
+      <img src="image-40.png" alt="drawing" width="180"/>
+
+      ![alt text](images/image-41.png)
+
   - [conv. Easy graph](https://copilot.microsoft.com/sl/cSZL4rZrBZY): describes it correctly, good enough explanation of the drivers, misses the important blockchain (mining) driver.
-  ![alt text](image-23.png)
+  ![alt text](images/image-23.png)
   - [conv. Relatively easy graph and well known in Economics](https://copilot.microsoft.com/sl/hjkfgbxjvNY): describes it correctly but doesn't recognise it, doesn't know it's name.
-  ![alt text](image-22.png)
+  ![alt text](images/image-22.png)
   - [conv. too complex graph](https://copilot.microsoft.com/sl/b9Aic7HDrVs): description misses the point, and is influenced by the most knwon overfitting issue.
-![alt text](image-21.png)
+![alt text](images/image-21.png)
 
 - Extract information from screenshot ([conv. complex info structure](https://copilot.microsoft.com/sl/keKYZ9uNnpc))
 <!-- ![alt text](image-20.png) -->
-<img src="image-20.png" alt="drawing" width="400"/>
-
+<img src="images/image-20.png" alt="drawing" width="300"/>
 
 > [!CAUTION]
 > Can you spot inconsistencies?
 
+
+#### Debug
+
+<img src="images/image-47.png" alt="drawing" width="300"/>
+```
+Help
+```
+
+![alt text](images/image-48.png)
+
+```
+I don't understand
+```
+
+![alt text](images/image-49.png)
+
+
+### Teaching
+
+```
+What is the Bayes theorem
+```
+
+![alt text](images/image-50.png)
+
+
+Asking for reformulation, explanation, examples, etc.
+```
+I don't have any background in statistics
+```
+![alt text](<images/Screenshot 2024-07-22 at 02.17.41.png>)
+
+Asking for verification
+```
+So one important aspect is that one should be aware of the average repartition of the population before making a guess?
+```
+![alt text](images/image-51.png)
+
+
+
+
 ### Image generation
-TODO
 Using Dall-e 3 (see [Dall-e general blog](https://openai.com/index/dall-e/) , [Dall-e 3 blog](https://openai.com/index/dall-e-3/) and [Dall-e 2 paper](https://cdn.openai.com/papers/dall-e-2.pdf) for a better understanding of the technology).
+
+
+#### Example 1: 
+Almost impossible to obtain proper "text". Good with styles. Everything depends on its knowledge and understanding of the world physics.
+
+```
+Generate an image of a surfer in summer at biarritz surfing a pipeline
+in the style of vintage travel poster
+```
+
+![alt text](images/image-52.jpeg) ![alt text](images/image-54.jpeg) ![alt text](images/image-53.jpeg) ![alt text](images/image-55.jpeg)
+
+#### Example 2: Lipstick
+
+Good understanding, pretty good rendering until... it got lost in the creativity (or bias?).
+
+```
+Generate a lipstick in a pure style like in a photo lightbox, extremely realistic
+```
+
+
 
 
 ## Limitations
 
-TODO
-Knowledge up to: `October 2023`
-
+- Knowledge cut-off date: `October 2023`
+- Bias (all the biases already present on internet: ethnicity, gender, etc.).
 
 ### Security
 
@@ -340,9 +458,6 @@ Knowledge up to: `October 2023`
 - **<r>Potentially biased and incorrect</r>**: *"LLMs can occasionally generate content that is biased, offensive, harmful, or incorrect. Therefore, it is imperative to consistently review and validate the responses for accuracy and appropriateness."* ([source](https://support.microsoft.com/en-us/topic/get-better-results-with-copilot-prompting-77251d6c-e162-479d-b398-9e46cf73da55?ocid=CopilotLab_SMC_Article_BetterResults))
 
 
-## Exercises
-
-TODO
 
 ## Learn more
 
