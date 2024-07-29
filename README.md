@@ -37,8 +37,9 @@
 - https://copilot.microsoft.com/
 - Search in any browser > *"copilot"* > "Search Microsoft Copilot: Your everyday AI companion"
 
-!!! danger Use Copilot with your business ID
-    Don't use Copilot with your personal ID. Don't use ChatGPT or any other tool. **Only Copilot with your business ID** **<g>enables</g>** the **<r>data protection level required for processing client or private data</r>**.
+> [!CAUTION]
+> Use Copilot with your business ID
+> Don't use Copilot with your personal ID. Don't use ChatGPT or any other tool. **Only Copilot with your business ID** **<g>enables</g>** the **<r>data protection level required for processing client or private data</r>**.
 
 ### Sections of the web page
 
@@ -310,7 +311,8 @@ les tenants et aboutissants de cette technologie.
 <img src="image-20.png" alt="drawing" width="400"/>
 
 
-!!! danger Can you spot inconsistencies?
+> [!CAUTION]
+> Can you spot inconsistencies?
 
 ### Image generation
 TODO
@@ -325,8 +327,9 @@ Knowledge up to: `October 2023`
 
 ### Security
 
-!!! danger Use Copilot with your business ID
-    Dont use Copilot with your personal ID. Don't use ChatGPT or any other tool. **Only Copilot with your business ID** **<g>enables</g>** the **<r>data protection level required for processing client or private data</r>**.
+> [!CAUTION]
+> Use Copilot with your business ID
+> Dont use Copilot with your personal ID. Don't use ChatGPT or any other tool. **Only Copilot with your business ID** **<g>enables</g>** the **<r>data protection level required for processing client or private data</r>**.
 
 - Review response (especially for queries you have never done several times yet)
 - Fact check
