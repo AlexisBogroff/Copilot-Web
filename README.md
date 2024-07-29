@@ -20,7 +20,7 @@
 - Build your resume
 - Search the internet
 
-!!! warning Copilot
+[!WARNING] Copilot
       Copilot can do the same tasks than ChatGPT4, but **ensuring the protection** of your **private and business data** ([Official Microsoft comparison](https://support.microsoft.com/en-au/topic/chatgpt-vs-microsoft-copilot-what-s-the-difference-8fdec864-72b1-46e1-afcb-8c12280d712f)).
 
 
