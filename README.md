@@ -343,7 +343,7 @@ Answer
       ```
       Can you describe this picture please?
       ```
-      <img src="image-40.png" alt="drawing" width="180"/>
+      <img src="images/image-40.png" alt="drawing" width="180"/>
 
       ![alt text](images/image-41.png)
 
