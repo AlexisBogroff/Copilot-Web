@@ -34,8 +34,8 @@ Thus, the following mostly describes how to use an LLM that has vision capabilit
 - Build your resume
 - Search the internet
 
-!!! warning Copilot
-    Copilot can do the same tasks than ChatGPT4, but **ensuring the protection** of your **private and business data** ([Official Microsoft comparison](https://support.microsoft.com/en-au/topic/chatgpt-vs-microsoft-copilot-what-s-the-difference-8fdec864-72b1-46e1-afcb-8c12280d712f)).
+> [!warning]
+> Copilot can do the same tasks than ChatGPT4, but **ensuring the protection** of your **private and business data** ([Official Microsoft comparison](https://support.microsoft.com/en-au/topic/chatgpt-vs-microsoft-copilot-what-s-the-difference-8fdec864-72b1-46e1-afcb-8c12280d712f)).
 
 
 **Indeed, ChatGPT4 is used directly by Copilot** ([official source](https://support.microsoft.com/en-us/topic/copilot-in-bing-our-approach-to-responsible-ai-45b5eae8-7466-43e1-ae98-b48f8ff8fd44))
@@ -104,15 +104,6 @@ Its answer relies **far less on verified information from a specific source** (a
   - 100 tokens ~= 75 words
   - 4000 tokens ~= 3000 words
   - 18000 tokens ~= 13.500 words
-
-<!-- #### Copilot plugins
-- Search -->
-<!-- ("Disabling Search will disable all enabled plugins") -->
-
-<!-- Other plugins are not accessible:
-- [Only in microsoft Copilot for Security: Third-party](https://learn.microsoft.com/en-us/copilot/security/manage-plugins?tabs=securitycopilotplugin)
-- [Roadmap showing availability in Bing or Edge search engines](https://learn.microsoft.com/en-us/copilot/plugins/roadmap)
-- More on [Bing search](https://support.microsoft.com/en-us/topic/how-bing-delivers-search-results-d18fc815-ac37-4723-bc67-9229ce3eb6a3), see section *"The Basics of Search"*. -->
 
 
 #### Voice
@@ -305,8 +296,6 @@ the importance of these practices and a call for collective efforts to embrace t
 ## Use cases
 
 ### Text only
-<!-- (could not be done without an LLM) -->
-TODO
 - Format text
 - Learning concepts (be careful though, good for STEM, bad for references and news).
 - Ideas for rephrasing
@@ -366,7 +355,7 @@ Answer
 ![alt text](images/image-21.png)
 
 - Extract information from screenshot ([conv. complex info structure](https://copilot.microsoft.com/sl/keKYZ9uNnpc))
-<!-- ![alt text](image-20.png) -->
+
 <img src="images/image-20.png" alt="drawing" width="300"/>
 
 > [!CAUTION]
@@ -376,6 +365,7 @@ Answer
 #### Debug
 
 <img src="images/image-47.png" alt="drawing" width="300"/>
+
 ```
 Help
 ```
