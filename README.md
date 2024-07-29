@@ -144,9 +144,10 @@ What was the result of France vs Spain?
 
 
 ##### Prompt example 2
-!!! tip Knowledge with or without sources?
-      - Difference between LLM knowledge without search (**global internet**) vs knowledge through **few sources** (precise, with sources, but potentially more limited and more heavily biased).
-      - Can be smarter without internet.
+> [!tip] 
+> Knowledge with or without sources?
+>- Difference between LLM knowledge without search (**global internet**) vs knowledge through **few sources** (precise, with sources, but potentially more limited and more heavily biased).
+>- Can be smarter without internet.
 
 <details>
 <summary><b>More details</b></summary>
@@ -168,8 +169,8 @@ With Search enabled ([attempt 1](https://copilot.microsoft.com/sl/dV4J7R7Evy8), 
 ### How to prompt
 
 #### One-shot prompt
-!!! warning Context
-      The context is **very important**: more information = less room for chance in the answer from Copilot. It's like asking something to a new employee that know nothing about your company, your objectives, your ways.
+> [!WARNING]
+> The context is **very important**: more information = less room for chance in the answer from Copilot. It's like asking something to a new employee that know nothing about your company, your objectives, your ways.
 
 From [Microsoft tips](https://support.microsoft.com/en-us/topic/cooking-up-a-great-prompt-getting-the-most-from-copilot-7b614306-d5aa-4b62-8509-e46674a29165?ocid=CopilotLab_SMC_Article_GetTips):
 - **Goal**
